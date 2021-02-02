@@ -1,4 +1,4 @@
-//빌보드 차트 웹사이트에서 정보 읽어오기
+//네이버 웹사이트에서 정보 읽어오기
 
 package kr.co.infopub.chapter.s089;
 
@@ -10,7 +10,7 @@ public class BillboardMain3 {
 	
 	public static void main (String[] args) {
 		
-		String newUrls="https://www.billboard.com/charts/hot-100";
+		String newUrls="https://www.naver.com/";
 		URL url = null; //웹사이트 경로를 찾는 URL 클래스를 선언한다.
 		try {
 			url = new URL(newUrls); //주소 찾기
@@ -23,7 +23,6 @@ public class BillboardMain3 {
 				}
 			}
 		} catch (Exception e) {
-			
 			System.out.println("Billboard Parsing error !! ");
 		}
 		
