@@ -58,15 +58,25 @@ public class RequestFromBillboardHot {
 				    String rank="li > button > span.chart-element__rank."+r1+r2;
 				    String song="li > button > span.chart-element__information > "+o1+o2;
 				    String singer="li > button > span.chart-element__information > "+i1+i2;
+				    //String image="li > button > span.chart-element__image.flex--no-shrink";
 				    
 					Elements ranks = doc.select(rank); //랭킹 : 모든 내용에서 랭킹 찾기
 					Elements songs = doc.select(song); //노래 : 모든 내용에서 노래 찾기
 					Elements singers = doc.select(singer); //가수 : 모든 내용에서 가수 찾기
+					//Elements images = doc.select(image); // 이미지 : 모든 내용에서 이미지 찾기
 					for(int i=0; i < ranks.size(); i++) {
 						Billboard board = new Billboard();
 						board.setRank(Integer.parseInt(ranks.get(i).text())); //형변환
 						board.setSong(songs.get(i).text());
 						board.setArtist(singers.get(i).text());
+						
+						/*String ss=images.get(i).attr("style");
+			        	if(ss!=null && !ss.trim().equals("") && ss.indexOf("https")!=-1) {
+			        		ss=ss.substring(ss.indexOf("https"));
+			        		ss=ss.substring(0,ss.length()-3);
+			        	}
+			        	board.setImagesrc(ss);*/
+						
 						billboards.add(board); // 빌보드 객체를 리스트에 저장
 					}
 				    
