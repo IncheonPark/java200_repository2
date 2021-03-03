@@ -1,5 +1,5 @@
 //내가 구현해 본 Comparator. 107의 CardComp와 비교 해보기
-package kr.co.infopub.chapter.s106;
+package kr.co.infopub.chapter.s107;
 
 import java.util.Comparator;
 

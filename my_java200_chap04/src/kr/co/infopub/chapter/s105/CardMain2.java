@@ -15,6 +15,11 @@ public class CardMain2 {
 		
 		System.out.println((int)(c1.getCardVal().charAt(0)));
 		System.out.println((int)(c1.getCardVal().charAt(1)));
+		if(c1.getCardVal().charAt(0) > c1.getCardVal().charAt(1)) {
+			System.out.println("0 : "+c1.getCardVal().charAt(0));
+			System.out.println("1 : "+c1.getCardVal().charAt(1));
+		}
+		
 		System.out.println((int)'c');
 		System.out.println((int)'H');
 		System.out.println((int)'A');
